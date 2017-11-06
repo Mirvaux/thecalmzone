@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Breathe With the Ocean</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src=“https://www.googletagmanager.com/gtag/js?id=UA-108360344-3“></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'UA-108360344-3');
+</script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> 
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+  
+</head>
+
+<body>
+<p id="header">Breathing Guide</p>
+<audio src="sound.mp3"></audio>
+
+
+
+        
+         
+
+
+  <div class="menu">
+  <div class="btn trigger">
+    <img id="logo" src="logo.png">
+  </div>
+  <div class="icons">
+    <div class="rotater">
+      <div class="btn btn-icon">
+        <a href="index.html"><img id="logo" src="anchor.png" title="Ocean theme" ></a>
+      </div>
+    </div>
+    <div class="rotater">
+      <div class="btn btn-icon">
+        <a href="sun.html">
+        <img id="logo" src="leaf.png" title="Sun theme" ></img></a>
+      </div>
+    </div>
+    <div class="rotater">
+      <div class="btn btn-icon"> <a onclick="PlaySound()" controls preload="auto">
+        <audio id="bflat"></audio><source src="sound.mp3">
+        <i title="Turn on the music" class="fa fa-volume-up"></i>
+        </a>
+      </div>
+    </div>
+     <div class="rotater">
+      <div class="btn btn-icon">
+        <img id="logo" src="planet.png" title="Turn on the music" ></img>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="center">
+  <div class="breathe"></div>
+</div>
+
+  <div class="fullscreen-bg">
+        <img src="videobg.jpg" class="bgimg">
+        <video loop muted autoplay poster="#" class="fullscreen-bg__video">
+            <source src="wave.mp4" type="video/mp4">
+
+<!-- <iframe width="10" height="10" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240259054&amp;color=%233a7496&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe> -->
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
