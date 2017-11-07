@@ -1,9 +1,51 @@
-
-var bflat = new Audio();
-bflat.src = "sound.mp3";
-function PlaySound(){
-bflat.play(bflat.src);
+function toggleImage(id) {
+    var image = document.getElementById(id);
+    image.style.display = image.style.display == "none" ? "block" : "none";
 }
+
+function toggleBoth() {
+  toggleImage('imagea')
+  toggleImage('imageb')
+}
+function toggleBoth2() {
+  toggleImage('image1')
+  toggleImage('image2')
+}
+
+var myAudio = document.getElementById("myAudio1");
+var isPlaying = false;
+
+function togglePlay1() {
+  if (isPlaying) {
+    myAudio.pause(myAudio)
+  } else {
+    myAudio.play(myAudio);
+  }
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+
+
+var water = document.getElementById("water");
+var isPlaying = false;
+
+function togglePlay2() {
+  if (isPlaying) {
+    water.pause(water)
+  } else {
+    water.play(water);
+  }
+};
+water.onplaying = function() {
+  isPlaying = true;
+};
+water.onpause = function() {
+  isPlaying = false;
+};
 
 // if (audio.currentTime == >0) {
 // var PlaySound = pause(bflat.src)

@@ -12,7 +12,7 @@ body {
   margin-left:1em;
   height: 50px;
   width: 50px;
-  
+  z-index: 2;
 }
 
 #header{
@@ -24,29 +24,24 @@ body {
   z-index: -100;
 }
 
-.bgimg {
+
+.fullscreen-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: -50;
+      }
+
+      .bgimg {
         top: 0;
         left: 0;
         height: 1060px;
         background-size: cover;
-        z-index: -2;
+        z-index: -100;
         }
-
-  .wrap {
-      height: 100%;  
-      position: relative;
-      overflow: hidden;
-      }
-
-      .fullscreen-bg {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        z-index: -1;
-      }
 
       .fullscreen-bg__video {
         position: absolute;
@@ -55,7 +50,92 @@ body {
         min-width: 100%;
         min-height: 100%;
         background-size: cover;
+        z-index: 0;
         }
+
+#imagea{
+  position: absolute;
+  bottom:25px;
+  margin-left:25px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.2;
+  
+}
+
+#imagea:hover{
+  position: absolute;
+  bottom:20px;
+  margin-left:20px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+  
+}
+
+#imageb{
+  position: absolute;
+  bottom:25px;
+  margin-left:25px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.2;
+  
+}
+
+#imageb:hover{
+  position: absolute;
+  bottom:20px;
+  margin-left:20px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+  
+}
+
+
+#image1{
+  position: absolute;
+  bottom:25px;
+  margin-left:25px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.2;
+  
+}
+
+#image1:hover{
+  position: absolute;
+  bottom:20px;
+  margin-left:20px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+  
+}
+
+#image2{
+  position: absolute;
+  bottom:25px;
+  margin-left:25px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.2;
+  
+}
+
+#image2:hover{
+  position: absolute;
+  bottom:20px;
+  margin-left:20px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+  
+}
+
+
+
 
  .menu:before, .menu:after {
   box-sizing: border-box;
@@ -66,7 +146,7 @@ body {
 
 .absolute-center, .menu, .menu .btn .fa, .menu .btn.trigger .line {
   position: absolute;
-  top: 7%;
+  top: 10%;
   left: 7%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
@@ -75,6 +155,7 @@ body {
 .menu {
   width: 5em;
   height: 5em;
+  z-index: 2;
 }
 .menu .btn {
   position: absolute;
@@ -190,18 +271,18 @@ body {
 }
 
 .menu.active .rotater:nth-child(1) .btn-icon {
-       -webkit-transform: translateY(-10em) rotate(-180deg);
-          transform: translateY(-10em) rotate(-180deg);
+       -webkit-transform: translateY(-100px) rotate(-180deg);
+          transform: translateY(-100px) rotate(-180deg);
 }
 
 .rotater:nth-child(2) {
-  -webkit-transform: rotate(150deg);
-          transform: rotate(150deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .menu.active .rotater:nth-child(2) .btn-icon {
-  -webkit-transform: translateY(-10em) rotate(-150deg);
-          transform: translateY(-10em) rotate(-150deg);
+  -webkit-transform: translateY(-100px) rotate(-90deg);
+          transform: translateY(-100px) rotate(-90deg);
 }
 
 .rotater:nth-child(3) {
@@ -268,14 +349,16 @@ body {
 
 .center {
   width: 100%;
-  height: 90vh;
+  height: 102vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
+
 .breathe{
   margin-top: 10vh;
-  z-index: 2;
+  
   width: 46vh;
   height: 46vh;
   background: white, 80%;
@@ -287,6 +370,7 @@ body {
   font-weight: light;
   color: #14537E, 80%;
   animation: 12s throb infinite ease-in-out;
+
 }
 
 @keyframes throb {

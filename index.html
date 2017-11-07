@@ -18,17 +18,16 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-  
+ 
 </head>
 
 <body>
+<div class="header">
 <p id="header">Breathing Guide</p>
-<audio src="sound.mp3"></audio>
+</div>
 
-
-
-        
-         
+<audio id="myAudio1" src="Breathe.mp3" preload="auto"></audio>
+<audio autoplay loop id="water" src="Sound.mp3" preload="auto"></audio>
 
 
   <div class="menu">
@@ -38,38 +37,36 @@
   <div class="icons">
     <div class="rotater">
       <div class="btn btn-icon">
-        <a href="index.html"><img id="logo" src="anchor.png" title="Ocean theme" ></a>
-      </div>
-    </div>
-    <div class="rotater">
-      <div class="btn btn-icon">
-        <a href="sun.html">
-        <img id="logo" src="leaf.png" title="Sun theme" ></img></a>
-      </div>
-    </div>
-    <div class="rotater">
-      <div class="btn btn-icon"> <a onclick="PlaySound()" controls preload="auto">
-        <audio id="bflat"></audio><source src="sound.mp3">
-        <i title="Turn on the music" class="fa fa-volume-up"></i>
+        <a id="myaudio1" onclick="togglePlay1()">
+          <img id="imagea" onclick="toggleBoth()" src="lip.svg" title="No Meditation"></img>
+          <img id="imageb"onclick="toggleBoth()" style="display: none;" src="lipnot.svg" title="Meditation" ></img>
         </a>
       </div>
     </div>
-     <div class="rotater">
+    <div class="rotater">
       <div class="btn btn-icon">
-        <img id="logo" src="planet.png" title="Turn on the music" ></img>
+       <a id="water" onclick="togglePlay2()">
+        <img id="image1"onclick="toggleBoth2()" src="soundon.svg" title="Sound on" ></img>
+
+        <img id="image2"onclick="toggleBoth2()" style="display: none;" src="soundoff.svg" title="Sound off" ></img>
+        </a>
       </div>
     </div>
+     
   </div>
 </div>
+
+<div class="fullscreen-bg">
+    <img src="videobg.jpg" class="bgimg">
+        <video loop muted autoplay poster="#" class="fullscreen-bg__video">
+            <source src="wave.mp4" type="video/mp4">
+              </div>
 
 <div class="center">
   <div class="breathe"></div>
 </div>
 
-  <div class="fullscreen-bg">
-        <img src="videobg.jpg" class="bgimg">
-        <video loop muted autoplay poster="#" class="fullscreen-bg__video">
-            <source src="wave.mp4" type="video/mp4">
+
 
 <!-- <iframe width="10" height="10" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240259054&amp;color=%233a7496&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe> -->
     <script  src="js/index.js"></script>
